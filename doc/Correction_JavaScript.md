@@ -64,7 +64,40 @@ Le rendu est le suivant:
 
 Le *Canvas* a une définition de 350x300 px, ce qui correspond à 5+2 colonnes et 4+2 lignes de 50 px:
 
-![quadrillage](img/quadrillage.png)
+<svg width="350" height="300" style="border: 1px solid black;">
+    <text x="65" y="40" style="font: 30px serif;">A</text>
+    <text x="115" y="40" style="font: 30px serif;">B</text>
+    <text x="165" y="40" style="font: 30px serif;">C</text>
+    <text x="215" y="40" style="font: 30px serif;">D</text>
+    <text x="265" y="40" style="font: 30px serif;">E</text>
+    <text x="25" y="85" style="font: 30px serif;">1</text>
+    <rect x="52" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="135" style="font: 30px serif;">2</text>
+    <rect x="52" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="185" style="font: 30px serif;">3</text>
+    <rect x="52" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="235" style="font: 30px serif;">4</text>
+    <rect x="52" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <path stroke="lightgray" stroke-width="1"
+          d="M 50 0 v 300 m 50 0 v -300 m 50 0 v 300 m 50 0 v -300 m 50 0 v 300 m 50 0 v -300 m 50 50 h -350 m 0 50 h 350 m 0 50 h -350 m 0 50 h 350 m 0 50 h -350"/>
+</svg>
+
 
 ### 1. Cases de jeu
 
@@ -91,7 +124,9 @@ Dans cette correction, une case sera un simple rectangle 46x46 px (afin de laiss
   pinceau.fillRect(52,52,46,46);
 ```
 
-![Premiere case](img/premier_cellule.png)
+<svg width="350" height="300" style="border: 1px solid black;">
+    <rect x="52" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+</svg>
 
 Plutôt que de faire 19 copier-coller pour dessiner les autres cellules, nous plaçons cette instruction dans 2 boucles *for* imbriquées (une pour les lignes et une pour les colonnes):
 
@@ -107,7 +142,29 @@ for (let i=1; i<=4; i+=1) { // Boucle sur les lignes (=ordonnées)
 
 Ce qui donne le résultat suivant:
 
-![Toutes les cases](img/cases.png)
+<svg width="350" height="300" style="border: 1px solid black;">
+    <rect x="52" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="52" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="52" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="52" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+</svg>
+
 
 ### 2. Légendes
 
@@ -122,7 +179,13 @@ pinceau.fillText("Texte à afficher", 100, 100); // texte,x,y
 ```
 
 > `x ` et `y` sont les coordonnées du coin inférieur gauche du rectangle qui contient `Texte à afficher`:
-> ![Texte à afficher](img/texte_a_afficher.png)
+> 
+><svg width="350" height="300" style="border: 1px solid black;">
+>  <text x="100" y="100" style="font: 20px sans-serif;">Texte à afficher</text>
+>  <circle cx="100" cy="100" r="2.5" fill="red"/>
+>  <rect x="100" y="85" width="135" height="15" stroke="black" fill="None"/>
+></svg>
+
 
 Là encore, pour éviter de copier-coller plusieurs fois la ligne de dessin de texte, on peut utiliser une boucle:
 
@@ -146,7 +209,40 @@ Là encore, pour éviter de copier-coller plusieurs fois la ligne de dessin de t
 
 Les coordonnées *x* et *y* ont été ajustées manuellement pour *à peu près* centrer le texte dans chaque ligne et colonne, ce qui donne le résultat suivant:
 
-![Plateau final](img/plateau_final.png)
+<svg width="350" height="300" style="border: 1px solid black;">
+    <text x="65" y="40" style="font: 30px serif;">A</text>
+    <text x="115" y="40" style="font: 30px serif;">B</text>
+    <text x="165" y="40" style="font: 30px serif;">C</text>
+    <text x="215" y="40" style="font: 30px serif;">D</text>
+    <text x="265" y="40" style="font: 30px serif;">E</text>
+    <text x="25" y="85" style="font: 30px serif;">1</text>
+    <rect x="52" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="52" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="135" style="font: 30px serif;">2</text>
+    <rect x="52" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="102" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="185" style="font: 30px serif;">3</text>
+    <rect x="52" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="152" width="46" height="46" fill="rgb(175,175,175)" />
+    <text x="25" y="235" style="font: 30px serif;">4</text>
+    <rect x="52" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="102" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="152" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="202" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+    <rect x="252" y="202" width="46" height="46" fill="rgb(175,175,175)" />
+</svg>
+
+
+
 
 ## III. Gestion de la souris
 
@@ -228,3 +324,63 @@ const legendeV = " 1234";
 let coup = legendeH[colonne] + legendeV[ligne];
 console.log(coup)
 ```
+
+## IV. Dessiner les cases
+
+La couleur de la case dépend de:
+
+1. si elle est jouée et contient une mine (*gris foncé*):
+
+<svg width="50" height="50">
+  <rect width="46" height="46" x="2" y="2" fill="rgb(100,100,100)" />
+</svg>
+
+2. si elle est jouée et ne contient pas de mine (*gris clair*).
+
+<svg width="50" height="50">
+  <rect width="46" height="46" x="2" y="2" fill="rgb(225,225,225)" />
+</svg>
+
+3. si elle est non jouée (*gris moyen*)
+
+<svg width="50" height="50">
+  <rect width="46" height="46" x="2" y="2" fill="rgb(175,175,175)" />
+</svg>
+
+La case peut aussi comporter des décorations :
+
+- case jouée avec mine découverte: dessin de la mine
+
+<svg width="50" height="50">
+  <rect width="46" height="46" x="2" y="2" fill="rgb(100,100,100)" />
+  <circle cx="25" cy="25" r="10" />
+  <path stroke="black" stroke-width="2" d="M 12 12 L 38 38 M 12 38 
+L 38 12 M 25 8 V 42" />
+</svg>
+
+- case jouée avec mine(s) voisine(s) : affichage du nombre de mine
+
+<svg width="50" height="50">
+  <rect width="46" height="46" x="2" y="2" fill="rgb(225,225,225)" />
+  <text x="18" y="32" style="font: 20px sans-serif;">5</text>
+</svg>
+
+
+- case non jouée mais marquée comme :
+  
+  - contenant sûrement une mine: dessiner un drapeau
+  
+  <svg width="50" height="50">
+    <rect width="46" height="46" x="2" y="2" fill="rgb(175,175,175)" />
+    <path fill="black" stroke="black"
+      stroke-width="2" d="M 8 42 L 8 8 L 25 16 L 8 24 Z" />
+  </svg>
+  
+  - contenant peut-être une mine: dessiner un drapeau et un `? `. 
+  
+  <svg width="50" height="50">
+    <rect width="46" height="46" x="2" y="2" fill="rgb(175,175,175)" />
+    <path fill="black" stroke="black"
+      stroke-width="2" d="M 8 42 L 8 8 L 25 16 L 8 24 Z" />
+    <text x="25" y="42" style="font: 15px sans-serif;">?</text>
+  </svg>
